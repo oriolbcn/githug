@@ -2,17 +2,12 @@ module Githug
   class Level
     include UI
 
-    LEVELS = [nil, "init", "config", "add", "commit", "clone",
-              "clone_to_folder", "ignore", "include", "status",
-              "number_of_files_committed", "rm", "rm_cached", "stash", "rename",
-              "restructure", "log", "tag", "push_tags", "commit_amend",
-              "commit_in_future", "reset", "reset_soft", "checkout_file", "remote",
-              "remote_url", "pull", "remote_add", "push", "diff", "blame", "branch",
-              "checkout", "checkout_tag", "checkout_tag_over_branch", "branch_at",
-              "delete_branch", "push_branch", "merge", "fetch", "rebase", "repack", "cherry-pick",
-              "grep", "rename_commit", "squash", "merge_squash", "reorder", "bisect",
-              "stage_lines", "find_old_branch", "revert", "restore", "conflict",
-              "submodule","contribute"]
+
+    LEVELS = [nil, "init", "config", "status", "status_index", "number_of_files_committed",
+              "add", "add_all", "commit", "ignore", "rm", "reset", "log", "checkout_file",
+              "branch", "checkout", "branch_at", "delete_branch", "merge", "clone",
+              "clone_to_folder", "remote", "remote_url", "remote_add", "pull", "push_simple",
+              "push_branch"]
 
     attr_accessor :level_no, :level_path, :level_name
 
