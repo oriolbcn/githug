@@ -6,14 +6,14 @@ setup do
   %w{config.rb README setup.rb deploy.rb Guardfile}.each do |file|
     FileUtils.touch(file)
   end
-  repo.add("database.yml")
+  repo.add("setup.rb")
 end
 
 solution do
 
   name = request("What is the full file name of the file in the staging area?")
 
-  if name != "database.yml"
+  if name != "setup.rb"
     return false
   end
 

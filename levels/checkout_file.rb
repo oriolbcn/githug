@@ -1,4 +1,4 @@
-difficulty 3
+difficulty 2
 
 description "A file has been modified, but you don't want to keep the modification.  Checkout the `config.rb` file from the last commit."
 

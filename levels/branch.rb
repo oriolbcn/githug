@@ -1,4 +1,4 @@
-difficulty 1
+difficulty 2
 description "You want to work on a piece of code that has the potential to break things, create the branch test_code."
 
 setup do

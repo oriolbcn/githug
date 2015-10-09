@@ -1,4 +1,4 @@
-difficulty 1
+difficulty 2
 description "Clone the repository at https://github.com/Gazler/cloneme to `my_cloned_repo`."
 
 solution do

@@ -1,6 +1,5 @@
 difficulty 3
-description "Your local master branch has diverged from " +
-  "the remote origin/master branch. Push your changes to the remote."
+description "You have made changes to your local master branch and want to publish those changes to the origin remote"
 
 setup do
   # remember the working directory so we can come back to it later
@@ -32,11 +31,6 @@ setup do
   # make a 'non-bare' repo accept pushes
   `git config receive.denyCurrentBranch ignore`
 
-  # add a different file and commit so remote and local would diverge
-  FileUtils.touch "file4"
-  repo.add        "file4"
-  repo.commit_all "Fourth commit"
-
   # change back to original repo to set up a remote
   Dir.chdir cwd
   `git remote add origin #{tmpdir}/.git`
@@ -51,7 +45,7 @@ solution do
   # Check the commits of the local branch and the branch are the same.
   local_commits = repo.commits("master")
   remote_commits = repo.commits("origin/master")
-  result = false unless local_commits.size == 4
+  result = false unless local_commits.size == 3
   local_commits.each_with_index do |commit, idx|
     result &&= (commit.id == remote_commits[idx].id)
   end
